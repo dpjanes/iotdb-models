@@ -1,0 +1,17 @@
+{
+    "author": "David P. Janes <davidjanes@iotdb.org> (https://iotdb.org)", 
+    "bugs": {
+        "url": "https://github.com/nodejitsu/iotdb-models/issues"
+    }, 
+    "description": "IOTDB Models",
+    "homepage": "https://iotdb.org", 
+    "repository": {
+        "type": "git", 
+        "url": "https://github.com/dpjanes/iotdb-models"
+    }, 
+    "license": "Apache-2.0", 
+    "name": "iotdb-models",
+
+    "private": true,
+    "version": "0.0.1"
+}
