@@ -29,19 +29,23 @@ exports.Model = iotdb.make_model('USGSEarthquake')
     .attribute(
         iotdb.make_number(":latitude")
             .reading()
+            .vector("latitude/longitude/elevation")
     )
     .attribute(
         iotdb.make_number(":longitude")
             .reading()
+            .vector("latitude/longitude/elevation")
     )
     .attribute(
         iotdb.make_number(":elevation")
             .reading()
+            .vector("latitude/longitude/elevation")
     )
     .attribute(
         iotdb.make_number(":magnitude")
             .unit(":energy.magnitude.richter")
             .reading()
+            .arithmetic_precision(1)
     )
     .driver_identity("iot-driver:feed")
     .driver_setup(function(paramd) {

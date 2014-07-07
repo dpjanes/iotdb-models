@@ -26,10 +26,12 @@ exports.Model = iotdb.make_model('FoursquareCheckin')
     .attribute(
         iotdb.make_number(":latitude")
             .reading()
+            .vector("latitude/longitude")
     )
     .attribute(
         iotdb.make_number(":longitude")
             .reading()
+            .vector("latitude/longitude")
     )
     .attribute(
         iotdb.make_boolean(":flag", "fresh")

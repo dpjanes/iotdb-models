@@ -14,11 +14,13 @@ exports.Model = iotdb.make_model('TWNCurrentWeather')
     .attribute( 
         iotdb.make_number(":temperature")
             .unit(":temperature.si.celsius")
+            .arithmetic_precision(0)
             .reading()
     )
     .attribute( 
         iotdb.make_number(":humidity")
             .unit(":math.fraction.percent")
+            .arithmetic_precision(0)
             .reading()
     )
     .attribute( 
