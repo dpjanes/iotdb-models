@@ -18,7 +18,7 @@ exports.Model = iotdb.make_model('SmartThingsMotion')
             .reading()
     )
     .driver_identity({
-        driver_iri: "iot-driver:smartthings",
+        driver: "iot-driver:smartthings",
         type: "motion"
     })
     .make()

@@ -1,27 +1,22 @@
-/*
- *  SmartThingsContact.js
- *
- *  David Janes
- *  IOTDB
- *  2014-03-06
- *
- *  SmartThings Contact Switch
- */
-
 "use strict";
 
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('SmartThingsContact')
     .attribute(
-        iotdb.make_boolean(':presence.contact', 'contact')
+        iotdb.make_boolean(":open")
             .reading()
     )
     .driver_identity({
-        driver_iri: "iot-driver:smartthings",
+        driver: "iot-driver:smartthings",
         type: "contact"
-    })
-    .driver_setup(function(paramd) {
+    }) 
+    .driver_in(function(paramd) {
+        if (paramd.driverd.contact !== undefined) {
+            paramd.thingd.open = paramd.driverd.contact ? false : true
+        }
     })
     .make()
     ;
+
+

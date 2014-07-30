@@ -20,7 +20,7 @@ exports.Model = iotdb.make_model('WeMoSwitch')
     )
     .make_attribute_reading("on", "on-value")
     .driver_identity({
-        "driver_iri": "iot-driver:upnp",
+        "driver": "iot-driver:upnp",
         "deviceType": "urn:Belkin:device:controllee:1"
     })
     .driver_setup(function(paramd) {
@@ -35,6 +35,19 @@ exports.Model = iotdb.make_model('WeMoSwitch')
                 paramd.thingd['on-value'] = false;
             } else if (d.BinaryState == '1') {
                 paramd.thingd['on-value'] = true;
+            }
+        }
+        if (paramd.metad !== undefined) {
+            paramd.metad["schema:manufacturer"] = "http://www.belkin.com/"
+            
+            if (paramd.metad.modelUrl) {
+                paramd.metad["schema:model"] = paramd.metad.modelUrl
+            } else {
+                paramd.metad["schema:model"] = "http://www.belkin.com/us/p/P-F7C027/"
+            }
+
+            if (paramd.metad.friendlyName) {
+                paramd.metad["iot:name"] = paramd.metad.friendlyName
             }
         }
     })
