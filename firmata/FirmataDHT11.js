@@ -28,14 +28,12 @@ exports.Model = iotdb.make_model('FirmataDHT11')
         paramd.initd["pins"] = "ht:pin=2,mode=sysex-input-float,extension=dht"
     })
     .driver_in(function(paramd) {
-        console.log(paramd)
         if (paramd.driverd.ht !== undefined) {
             paramd.thingd.humidity = paramd.driverd.ht[0]
             paramd.thingd.temperature = paramd.driverd.ht[1]
         }
     })
     .driver_out(function(paramd) {
-        console.log(paramd.thingd)
     })
     .make()
     ;

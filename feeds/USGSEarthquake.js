@@ -49,7 +49,7 @@ exports.Model = iotdb.make_model('USGSEarthquake')
     )
     .driver_identity("iot-driver:feed")
     .driver_setup(function(paramd) {
-        paramd.initd.api = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.atom'
+        paramd.initd.iri = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.atom'
     })
     .driver_in(function(paramd) {
         if (paramd.driverd.date) {
