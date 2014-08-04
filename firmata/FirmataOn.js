@@ -18,6 +18,7 @@ exports.Model = iotdb.make_model('FirmataOn')
     .product("http://www.seeedstudio.com/depot/Grove-Relay-p-769.html")
     .product("http://www.seeedstudio.com/depot/Grove-Vibration-Motor-p-839.html")
     .product("http://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html")
+    .description("turn something on")
     .help("make sure to set initd.pin")
     .attribute(
         attribute.make_boolean(":on")
