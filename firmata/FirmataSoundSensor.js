@@ -14,7 +14,7 @@ var attribute = iotdb.attribute
 exports.Model = iotdb.make_model('FirmataSoundSensor')
     .product("http://www.seeedstudio.com/depot/Grove-Sound-Sensor-p-752.html")
     .help("make sure to set initd.pin")
-    .facet(":sensor.sound")
+    .facet(":device.sensor.sound")
     .attribute(
         attribute.make_unit(":sensor.sound")
             .reading()

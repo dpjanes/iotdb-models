@@ -15,7 +15,7 @@ exports.Model = iotdb.make_model('FirmataLightSimple')
     .product("http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html")
     .product("http://www.seeedstudio.com/depot/Grove-Blue-LED-p-1139.html")
     .product("http://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html")
-    .facet(":lighting")
+    .facet(":device.lighting")
     .help("make sure to set initd.pin")
     .attribute(
         attribute.make_boolean(":on")

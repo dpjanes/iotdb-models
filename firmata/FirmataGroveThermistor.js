@@ -13,7 +13,7 @@ var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('FirmataGroveThermistor')
     .product("http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html")
-    .facet(":sensor.temperature")
+    .facet(":device.sensor.temperature")
     .help("make sure to set initd.pin (analog)")
     .attribute(
         iotdb.make_number(":sensor.temperature")

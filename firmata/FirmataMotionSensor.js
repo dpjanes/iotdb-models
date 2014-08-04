@@ -13,7 +13,7 @@ var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('FirmataMotionSensor')
     .product("http://www.seeedstudio.com/depot/Grove-PIR-Motion-Sensor-p-802.html")
-    .facet(":sensor.motion")
+    .facet(":device.sensor.motion")
     .help("make sure to set initd.pin")
     .attribute(
         attribute.make_boolean(":sensor.motion")

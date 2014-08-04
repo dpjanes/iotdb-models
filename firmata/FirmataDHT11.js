@@ -14,8 +14,8 @@ var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('FirmataDHT11')
     .product("http://www.seeedstudio.com/depot/Grove-TempHumi-Sensor-p-745.html")
-    .facet(":sensor.humidity")
-    .facet(":sensor.temperature")
+    .facet(":device.sensor.humidity")
+    .facet(":device.sensor.temperature")
     .attribute(
         iotdb.make_number(":sensor.humidity")
             .reading()

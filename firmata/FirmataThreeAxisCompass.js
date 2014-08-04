@@ -13,7 +13,7 @@ var iotdb = require("iotdb")
 exports.Model = iotdb.make_model('FirmataThreeAxisCompass')
     .help("make sure to set paramd.initd.declination (in degrees) using http://magnetic-declination.com/")
     .product("http://www.seeedstudio.com/depot/Grove-3Axis-Digital-Compass-p-759.html")
-    .facet(":sensor.spatial")
+    .facet(":device.sensor.spatial")
     .attribute(
         iotdb.make_number(":heading")
             .reading()

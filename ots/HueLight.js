@@ -9,7 +9,7 @@
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('HueLight')
-    .facet(":lighting")
+    .facet(":device.lighting")
     .name("Hue Light")
     .description("Philips Hue colored light")
     .attribute(

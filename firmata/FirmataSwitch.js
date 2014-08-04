@@ -16,7 +16,7 @@ exports.Model = iotdb.make_model('FirmataSwitch')
     .product("http://www.seeedstudio.com/depot/Grove-Button-p-766.html")
     .product("http://www.seeedstudio.com/depot/Grove-SwitchP-p-1252.html")
     .help("make sure to set initd.pin")
-    .facet(":control.switch")
+    .facet(":device.control.switch")
     .attribute(
         attribute.make_boolean(":on", "value")
             .reading()
