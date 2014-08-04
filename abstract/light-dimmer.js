@@ -13,6 +13,7 @@
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('AbstractLightDimmer')
+    .facet(":lighting")
     .attribute(
         iotdb.make_boolean("on")
             .control()

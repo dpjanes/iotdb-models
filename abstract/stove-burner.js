@@ -13,6 +13,7 @@
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('AbstractStoveBurner')
+    .facet(":appliance.stove.burner")
     .attribute(
         iotdb.make_number(":intensity")
             .control()

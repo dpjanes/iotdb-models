@@ -13,6 +13,7 @@
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('AbstractClock')
+    .facet(":clock")
     .attribute(
         iotdb.make_datetime(":when", "when")
             .reading()
@@ -22,5 +23,4 @@ exports.Model = iotdb.make_model('AbstractClock')
             .control()
     )
     .link_control_reading("when-set", "when")
-    .facet(":clock")
     .make()

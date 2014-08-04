@@ -13,6 +13,7 @@
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('AbstractTimer')
+    .facet(":clock")
     .attribute(
         iotdb.make_string(":timer")
             .reading()
