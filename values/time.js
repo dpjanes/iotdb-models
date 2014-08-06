@@ -11,11 +11,10 @@
 "use strict";
 
 var iotdb = require("iotdb")
-var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('ValueTime')
     .attribute(
-        attribute.make_time("value")
+        iotdb.make_time("value")
     )
     .make()
     ;

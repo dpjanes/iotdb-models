@@ -9,7 +9,6 @@
 "use strict";
 
 var iotdb = require("iotdb")
-var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('FirmataSwitch')
     .product("http://www.seeedstudio.com/depot/Grove-ButtonP-p-1243.html")
@@ -18,7 +17,7 @@ exports.Model = iotdb.make_model('FirmataSwitch')
     .help("make sure to set initd.pin")
     .facet(":device.control.switch")
     .attribute(
-        attribute.make_boolean(":on", "value")
+        iotdb.make_boolean(":on", "value")
             .reading()
     )
     .driver_identity(":firmata")

@@ -11,11 +11,10 @@
 "use strict";
 
 var iotdb = require("iotdb")
-var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('ValueColor')
     .attribute(
-        attribute.make_color("value")
+        iotdb.make_color("value")
     )
     .make()
     ;

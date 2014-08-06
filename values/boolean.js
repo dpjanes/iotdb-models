@@ -11,11 +11,10 @@
 "use strict";
 
 var iotdb = require("iotdb")
-var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('ValueBoolean')
     .attribute(
-        attribute.make_boolean(":value")
+        iotdb.make_boolean(":value")
     )
     .make()
     ;

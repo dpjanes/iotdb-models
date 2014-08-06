@@ -11,11 +11,10 @@
 "use strict";
 
 var iotdb = require("iotdb")
-var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('ValueUnit')
     .attribute(
-        attribute.make_number("value")
+        iotdb.make_number("value")
             .minimum(0)
             .maximum(1)
             .unit(":math.fraction.unit")

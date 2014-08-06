@@ -9,7 +9,6 @@
 "use strict";
 
 var iotdb = require("iotdb")
-var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('GeoCoordinates')
     .attribute(

@@ -9,7 +9,6 @@
 "use strict";
 
 var iotdb = require("iotdb")
-var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('FirmataGroveThermistor')
     .product("http://www.seeedstudio.com/depot/Grove-Temperature-Sensor-p-774.html")

@@ -9,7 +9,6 @@
 "use strict";
 
 var iotdb = require("iotdb")
-var attribute = iotdb.attribute
 
 exports.Model = iotdb.make_model('FirmataLightSimple')
     .product("http://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html")
@@ -18,7 +17,7 @@ exports.Model = iotdb.make_model('FirmataLightSimple')
     .facet(":device.lighting")
     .help("make sure to set initd.pin")
     .attribute(
-        attribute.make_boolean(":on")
+        iotdb.make_boolean(":on")
             .control()
     )
     .driver_identity(":firmata")
