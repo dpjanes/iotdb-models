@@ -16,10 +16,8 @@ exports.Model = iotdb.make_model('LightDimmer')
     .facet(":device.lighting")
     .attribute(
         iotdb.make_boolean("on")
-            .control()
     )
     .attribute(
         iotdb.make_unit("brightness")
-            .control()
     )
     .make()

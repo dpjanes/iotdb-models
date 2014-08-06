@@ -16,15 +16,12 @@ exports.Model = iotdb.make_model('LightColor')
     .facet(":device.lighting")
     .attribute(
         iotdb.make_boolean("on")
-            .control()
     )
     .attribute(
         iotdb.make_unit("brightness")
-            .control()
     )
     .attribute(
         iotdb.make_color("color")
-            .control()
     )
     .validator(function(paramd) {
         for (var code in paramd.attributed) {
