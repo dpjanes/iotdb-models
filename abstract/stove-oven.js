@@ -10,7 +10,7 @@
 
 var iotdb = require("iotdb")
 
-exports.Model = iotdb.make_model('AbstractStoveOven')
+exports.Model = iotdb.make_model('StoveOven')
     .facet(":device.appliance.stove.oven")
     .attribute(
         iotdb.make_boolean(':on')

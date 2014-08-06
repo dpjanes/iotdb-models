@@ -13,7 +13,7 @@
 var iotdb = require("iotdb")
 var attribute = iotdb.attribute
 
-exports.Model = iotdb.make_model('AbstractValueString')
+exports.Model = iotdb.make_model('ValueString')
     .attribute(
         attribute.make_string("value")
     )

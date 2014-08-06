@@ -12,7 +12,7 @@
 
 var iotdb = require("iotdb")
 
-exports.Model = iotdb.make_model('AbstractClock')
+exports.Model = iotdb.make_model('Clock')
     .facet(":device.device.clock")
     .attribute(
         iotdb.make_datetime(":when", "when")

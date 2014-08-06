@@ -13,7 +13,7 @@
 var iotdb = require("iotdb")
 var attribute = iotdb.attribute
 
-exports.Model = iotdb.make_model('AbstractValuePercent')
+exports.Model = iotdb.make_model('ValuePercent')
     .attribute(
         attribute.make_number("value")
             .minimum(0)

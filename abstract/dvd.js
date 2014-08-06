@@ -12,7 +12,7 @@
 
 var iotdb = require("iotdb")
 
-exports.Model = iotdb.make_model('AbstractDVD')
+exports.Model = iotdb.make_model('DVD')
     .facet(":device.media")
     .attribute(
         iotdb.make_boolean("on")
