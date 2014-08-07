@@ -19,6 +19,7 @@ exports.Model = iotdb.make_model('FirmataDHT11')
     .attribute(
         iotdb.make_number(":sensor.humidity")
             .reading()
+            .unit(":math.fraction.percent")
     )
     .attribute(
         iotdb.make_number(":sensor.temperature")
