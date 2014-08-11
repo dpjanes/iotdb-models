@@ -13,6 +13,7 @@
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('SmartThingsSwitch')
+    .facet(":device.switch")
     .attribute(
         iotdb.make_boolean(":on")
             .name("on / off")

@@ -9,7 +9,7 @@
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('WeMoSwitch')
-    .facet(":device.lighting")
+    .facet(":device.switch")
     .product("http://www.belkin.com/us/F7C027-Belkin/p/P-F7C027/")
     .name("WeMo Switch")
     .description("Belkin WeMo Switch")
