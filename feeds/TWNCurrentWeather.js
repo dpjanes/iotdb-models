@@ -12,13 +12,13 @@ var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('TWNCurrentWeather')
     .attribute( 
-        iotdb.make_number(":temperature")
+        iotdb.make_number(":sensor.temperature")
             .unit(":temperature.si.celsius")
             .arithmetic_precision(0)
             .reading()
     )
     .attribute( 
-        iotdb.make_number(":humidity")
+        iotdb.make_number(":sensor.humidity")
             .unit(":math.fraction.percent")
             .arithmetic_precision(0)
             .reading()

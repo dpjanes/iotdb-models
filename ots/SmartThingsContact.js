@@ -3,8 +3,9 @@
 var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('SmartThingsContact')
+    .facet(":device.sensor.contact")
     .attribute(
-        iotdb.make_boolean(":open")
+        iotdb.make_boolean(":sensor.open")
             .reading()
     )
     .driver_identity({
