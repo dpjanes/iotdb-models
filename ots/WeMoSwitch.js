@@ -24,7 +24,7 @@ exports.Model = iotdb.make_model('WeMoSwitch')
         "deviceType": "urn:Belkin:device:controllee:1"
     })
     .driver_setup(function(paramd) {
-        paramd.setupd["subscribe"] = [
+        paramd.initd.subscribes = [
             'urn:Belkin:service:basicevent:1'
         ]
     })
