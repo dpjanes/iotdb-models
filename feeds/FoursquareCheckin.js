@@ -39,7 +39,7 @@ exports.Model = iotdb.make_model('FoursquareCheckin')
     )
     .driver_identity(":feed")
     .driver_in(function(paramd) {
-        // console.log(paramd.driverd)
+        // paramd.libs.log(paramd.driverd)
 
         if (paramd.driverd.link !== undefined) {
             paramd.thingd.where = paramd.driverd.link

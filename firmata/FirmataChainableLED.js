@@ -22,7 +22,7 @@ exports.Model = iotdb.make_model('FirmataChainableLED')
         paramd.initd["pins"] = "rgb:pin=7,mode=sysex-output-int8,extension=cled"
     })
     .driver_in(function(paramd) {
-        // console.log(paramd.driverd)
+        // paramd.libs.log(paramd.driverd)
     })
     .driver_out(function(paramd) {
         if (paramd.thingd.color !== undefined) {

@@ -55,6 +55,6 @@ exports.Model = iotdb.make_model('TWNCurrentWeather')
             }
         }
 
-        // console.log(paramd.thingd)
+        // paramd.libs.log(paramd.thingd)
     })
     .make()

@@ -41,13 +41,13 @@ exports.Model = iotdb.make_model('BeanTemperature')
         var value = paramd.driverd['a495ff11c5b14b44b5121370f02d74de']
         if (value !== undefined) {
             if (value.length != 8) {
-                console.log("# BeanLight.driver_in", "expected value.length==8", value)
+                paramd.libs.log("# BeanLight.driver_in", "expected value.length==8", value)
             } else if (value[1] != 3) {
-                console.log("# BeanLight.driver_in", "expected value[1]==3", value)
+                paramd.libs.log("# BeanLight.driver_in", "expected value[1]==3", value)
             } else if (value[3] != 32) {
-                console.log("# BeanLight.driver_in", "expected value[3]==32", value)
+                paramd.libs.log("# BeanLight.driver_in", "expected value[3]==32", value)
             } else if (value[4] != 145) {
-                console.log("# BeanLight.driver_in", "expected value[4]==145", value)
+                paramd.libs.log("# BeanLight.driver_in", "expected value[4]==145", value)
             } else {
                 paramd.thingd['temperature'] = value[5]
             }
