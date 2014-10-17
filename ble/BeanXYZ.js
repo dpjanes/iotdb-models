@@ -46,10 +46,10 @@ exports.Model = iotdb.make_model('BeanXYZ')
         if (value !== undefined) {
             // paramd.libs.log(value);
             // console.log(x, y, z)
-            if (value.length != 14) {
-                paramd.libs.log("# BeanLight.driver_in", "expected value.length==14", value)
-            } else if (value[1] != 9) {
-                paramd.libs.log("# BeanLight.driver_in", "expected value[1]==3", value)
+            if (value.length < 12) {
+                paramd.libs.log("# BeanLight.driver_in", "expected value.length>=12", value.length, value)
+            } else if ((value[1] != 8) && (value != 9)) {
+                paramd.libs.log("# BeanLight.driver_in", "expected value[1]==8 or 9", value)
             } else if (value[3] != 0x20) {
                 paramd.libs.log("# BeanLight.driver_in", "expected value[3]==0x20", value)
             } else if (value[4] != 0x90) {
