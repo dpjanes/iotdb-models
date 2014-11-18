@@ -19,7 +19,9 @@ exports.Model = iotdb.make_model('FirmataChainableLED')
         )
     .driver_identity(":firmata")
     .driver_setup(function(paramd) {
-        paramd.initd["pins"] = "rgb:pin=7,mode=sysex-output-int8,extension=cled"
+        paramd.initd.n = 1;
+        paramd.initd.extension = "cled";
+        paramd.initd.pins = "rgb:pin=7,mode=sysex-output-int8";
     })
     .driver_in(function(paramd) {
         // paramd.libs.log(paramd.driverd)

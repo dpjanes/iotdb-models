@@ -28,7 +28,8 @@ exports.Model = iotdb.make_model('FirmataDHT11')
     )
     .driver_identity(":firmata")
     .driver_setup(function(paramd) {
-        paramd.initd["pins"] = "ht:pin=2,mode=sysex-input-float,extension=dht"
+        paramd.initd.extension = "dht";
+        paramd.initd.pins = "ht:pin=2,mode=sysex-input-float";
     })
     .driver_in(function(paramd) {
         if (paramd.driverd.ht !== undefined) {

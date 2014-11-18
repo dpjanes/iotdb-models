@@ -36,7 +36,8 @@ exports.Model = iotdb.make_model('FirmataThreeAxisCompass')
     )
     .driver_identity(":firmata")
     .driver_setup(function(paramd) {
-        paramd.initd.pins = "xyz:pin=2,mode=sysex-input-float,extension=tac"
+        paramd.initd.extension = "tac";
+        paramd.initd.pins = "xyz:pin=2,mode=sysex-input-float";
         paramd.initd.scale = 1.3        // only if you do new hardware
         paramd.initd.declination = 0    // in _degrees_
     })
