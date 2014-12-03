@@ -18,11 +18,12 @@ exports.Model = iotdb.make_model('TimerHour')
     )
     .driver_identity(":timer")
     .driver_setup(function(paramd) {
+        paramd.initd.id = "timer";
         paramd.initd.minute = 0;
         paramd.initd.hour_repeat = 1;
     })
     .driver_in(function(paramd) {
-        if (paramd.driverd.isodatetime) {
+        if ((paramd.driverd.id === "timer") && (paramd.thingd.isodatetime !== undefined)) {
             paramd.thingd.when = paramd.driverd.isodatetime;
         }
     })
