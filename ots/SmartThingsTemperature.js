@@ -15,11 +15,7 @@ var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('SmartThingsTemperature')
     .facet(":device.sensor.climate")
-    .attribute(
-        iotdb.make_number(':sensor.temperature')
-            .unit(":temperature.imperial.fahrenheit")
-            .reading()
-    )
+    .i("temperature", iotdb.sensor.number.temperature.fahrenheit)
     .driver_identity({
         driver: "iot-driver:smartthings",
         type: "temperature"

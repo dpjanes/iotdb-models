@@ -12,27 +12,10 @@ exports.Model = iotdb.make_model('LGSmartTV')
     .facet(":device.media.tv")
     .product("http://www.lg.com/us/experience-tvs/smart-tv")
     .name("LG Smart TV (WebOs)")
-    .attribute(
-        iotdb.make_string(":band")
-            .control()
-    )
-    .make_attribute_reading("band", "band-value")
-    .attribute(
-        iotdb.make_integer(":channel")
-            .control()
-            .minimum(1)
-    )
-    .make_attribute_reading("channel", "channel-value")
-    .attribute(
-        iotdb.make_percent(":volume")
-            .control()
-    )
-    .make_attribute_reading("volume", "volume-value")
-    .attribute(
-        iotdb.make_boolean(":mute")
-            .control()
-    )
-    .make_attribute_reading("mute", "mute-value")
+    .io("band", "band-value", iotdb.string.band)
+    .io("channel", "channel-value", iotdb.integer.channel)
+    .io("volume", "volume-value", iotdb.percent.volume)
+    .io("mute", "mute-value", iotdb.boolean.mute)
     .driver_identity({
         "driver": "iot-driver:lg/smart-tv"
     })

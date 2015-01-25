@@ -13,12 +13,7 @@ exports.Model = iotdb.make_model('WeMoSwitch')
     .product("http://www.belkin.com/us/F7C027-Belkin/p/P-F7C027/")
     .name("WeMo Switch")
     .description("Belkin WeMo Switch")
-    .attribute(
-        iotdb.make_boolean(":on")
-            .name("on / off")
-            .control()
-    )
-    .make_attribute_reading("on", "on-value")
+    .io("on", "on-value", iotdb.boolean.on)
     .driver_identity({
         "driver": "iot-driver:upnp",
         "deviceType": "urn:Belkin:device:controllee:1"

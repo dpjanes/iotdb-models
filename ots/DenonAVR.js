@@ -12,21 +12,9 @@ exports.Model = iotdb.make_model('DenonAVR')
     .facet(":device.lighting")
     .name("Denon AVR")
     .description("Denon Audio/Visual Receivers")
-    .attribute(
-        iotdb.make_boolean(":on")
-            .name("on / off")
-            .description("turn the on or off/standby")
-    )
-    .make_attribute_reading("on", "on-value")
-    .attribute(
-        iotdb.make_percent(":volume")
-    )
-    .make_attribute_reading("volume", "on-value")
-    .attribute(
-        iotdb.make_string(":band")
-            .control()
-    )
-    .make_attribute_reading("band", "band-value")
+    .io("on", "on-value", iotdb.boolean.on)
+    .io("volume", "volume-value", iotdb.percent.volume)
+    .io("band", "band-value", iotdb.string.band)
     .driver_identity("iot-driver:telnet")
     .driver_out(function(paramd) {
         var commands = [];

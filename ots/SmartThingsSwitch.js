@@ -14,10 +14,7 @@ var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('SmartThingsSwitch')
     .facet(":device.switch")
-    .attribute(
-        iotdb.make_boolean(":on")
-            .name("on / off")
-    )
+    .o("on", iotdb.boolean.on)
     .driver_identity({
         driver: "iot-driver:smartthings",
         type: "switch"

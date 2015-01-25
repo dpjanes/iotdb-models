@@ -15,15 +15,7 @@ var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('SmartThingsBattery')
     .facet(":device.sensor.battery")
-    .attribute(
-        iotdb.make_number(':sensor.battery')
-            .unit(":math.fraction.percent")
-            .reading()
-    )
-    .driver_identity({
-        driver: "iot-driver:smartthings",
-        type: "battery"
-    })
+    .i("battery", iotdb.sensor.percent.battery)
     .driver_in(function(paramd) {
         if (paramd.driverd.battery) {
             paramd.thingd.battery = paramd.driverd.battery * 100

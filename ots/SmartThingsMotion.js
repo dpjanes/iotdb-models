@@ -14,10 +14,7 @@ var iotdb = require("iotdb")
 
 exports.Model = iotdb.make_model('SmartThingsMotion')
     .facet(":device.sensor.motion")
-    .attribute(
-        iotdb.make_boolean(':sensor.motion', 'motion')
-            .reading()
-    )
+    .i("open", iotdb.sensor.boolean.motion)
     .driver_identity({
         driver: "iot-driver:smartthings",
         type: "motion"
