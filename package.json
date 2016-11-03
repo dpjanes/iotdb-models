@@ -4,7 +4,7 @@
         "url": "https://github.com/dpjanes/iotdb-models/issues"
     }, 
     "description": "IOTDB Models", 
-    "homepage": "https://iotdb.org", 
+    "homepage": "https://github.com/dpjanes/node-iotdb",
     "license": "Apache-2.0", 
     "main": "bootstrap.js", 
     "name": "iotdb-models", 
